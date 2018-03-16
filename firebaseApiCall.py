@@ -15,7 +15,7 @@ time =  utc.strftime("%H") # gmt/utc time
 text = ""
 textaum = ""
 
-trigger_hours = ["00","08", "11" , "13", "15", "18", "19", "20", "21","23"]
+trigger_hours = ["00","01","02","03","04","05","06","07","12","09","08","11","13","15","18","19","20", "21","23","10","14","16",]
 print (time)
 print ("condition: " + str(time in trigger_hours))
 
