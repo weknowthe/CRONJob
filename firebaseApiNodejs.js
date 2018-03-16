@@ -5,6 +5,7 @@ var pyshell = new PythonShell.run('./firebaseApiCall.py');
 // get message back
 pyshell.on('message', function (message) {
   // received a message sent from the Python script (a simple "print" statement) 
+  console.log("in on msg");
   console.log(message);
 });
 
