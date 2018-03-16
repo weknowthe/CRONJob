@@ -22,6 +22,6 @@ pyshell.end(function (err) {
 });
 };
 cron.schedule('0 * * * *', function(){
-  console.log('running a python function every minute');
+  console.log('running a python function every hour');
   pythonCall();
 });
