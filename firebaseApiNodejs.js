@@ -1,5 +1,8 @@
 var PythonShell = require('python-shell');
+var cron = require('node-cron');
 
+
+function pythonCall() {
 var pyshell = new PythonShell.run('./firebaseApiCall.py');
 
 // get message back
@@ -17,4 +20,9 @@ pyshell.end(function (err) {
   if (err) throw err;
   console.log('on line 18');
   console.log('exit');
+});
+};
+cron.schedule('* * * * *', function(){
+  console.log('running a task every minute');
+  pythonCall();
 });
