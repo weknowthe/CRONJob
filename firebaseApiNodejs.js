@@ -21,7 +21,7 @@ pyshell.end(function (err) {
   console.log('exit');
 });
 };
-cron.schedule('* * * * *', function(){
+cron.schedule('0 * * * *', function(){
   console.log('running a python function every minute');
   pythonCall();
 });
