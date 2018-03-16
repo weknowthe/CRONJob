@@ -11,7 +11,7 @@ utc = datetime.utcnow()
 utc = pytz.utc.localize(utc, is_dst=None).astimezone(tz)
 time =  utc.strftime("%H") # gmt/utc time
 text = ""
-trigger_hours = ["08", "11" , "13", "15", "18", "19", "20", "21"]
+trigger_hours = ["08", "11" , "13", "15", "18", "19", "20", "21","23"]
 print (time)
 print ("condition: " + str(time in trigger_hours))
 if time in trigger_hours:
@@ -46,6 +46,6 @@ if time in trigger_hours:
         }
         message_title = "Today's Mantra..."
         push_service = FCMNotification(api_key="AAAAgJxP-K4:APA91bHO-ZG61ElfY5WSGtoBS8kNtNYpxfA2HIYIbWt4prC_QJJU40ouX0PypDKt_WDBUzEQGl85f5wjICOBCxFYcOxwKP37J7Xoduayw2ES7jo8WSLw1V-7zcC9UXjk8R1wP10n2KES")
-        topic_condition = "('imageSupport' in topics )"
+        topic_condition = "('PushTest' in topics )"
         result = push_service.notify_topic_subscribers(message_body='', data_message=data_message, condition=topic_condition)
         print(result)
