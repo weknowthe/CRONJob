@@ -73,8 +73,8 @@ if time in trigger_hours:
 	topic_condition = "('PushTest' in topics )"
 	aum_topic_condition = "('AUM' in topics )"
 
-	aum_result = aum_push_service.notify_topic_subscribers(message_body='', data_message=aum_data_message, condition=aum_topic_condition)
+	#aum_result = aum_push_service.notify_topic_subscribers(message_body='', data_message=aum_data_message, condition=aum_topic_condition)
 	result = push_service.notify_topic_subscribers(message_body='', data_message=data_message, condition=topic_condition)
 
 	print(result)
-	print(aum_result)
+	#print(aum_result)
